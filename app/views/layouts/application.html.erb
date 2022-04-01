@@ -11,18 +11,8 @@
   </head>
 
   <body>
-    <%= yield %>
-    <!-- menu bar [add css to format it better, make it interactive] -->
-    <div class="sidebar">
-    	<ul class="nav-sidebar">
-          <li class="sidebar_profile"><%= link_to "Profile", "#" %></li>
-          <li class="sidebar_map"><%= link_to "Map", "#" %></li>
-          <li class="sidebar_contact"><%= link_to "Homepage", "/user/add" %></li>
-          <li class="sidebar_about"><%= link_to "aboutUs", "/about/aboutUs" %></li>
-    	    <!-- <li class="sidebar_contact"><%= link_to "contact(sidebar2)", "/about/contact" %></li> -->
-          <li class="sidebar_contact"><%= link_to "Settings", "#" %></li>
-      	</ul>
-
-    </div>
+    <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+         <%= yield %>
   </body>
 </html>

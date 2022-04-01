@@ -30,16 +30,15 @@
 
 default: &default
   adapter: mysql2
-  host: localhost
   encoding: utf8mb4
   collation: utf8mb4_unicode_520_ci
   reconnect: false
   pool: 5
-  socket:  /var/run/mysqld/mysqld.sock
+  socket: <%= ENV['MYSQL_SOCKET'] || '' %>
 
 development:
   <<: *default
-  database: valetbike_development
+  database: first_try_development
   username: <%= ENV['MYSQL_USERNAME'] || '' %>
   password: <%= ENV['MYSQL_PASSWORD'] || '' %>
 
@@ -51,9 +50,9 @@ test:
 
 production:
   <<: *default
-  database: valetbike_production
-  username: root
-  password:
+  database: first_try_production
+  username: first_try
+  password: <%= ENV['FIRST_TRY_DATABASE_PASSWORD'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -75,8 +74,8 @@ production:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: first_try_production
-  username: first_try
-  password: <%= ENV['FIRST_TRY_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: first_try_production
+#   username: first_try
+#   password: <%= ENV['FIRST_TRY_DATABASE_PASSWORD'] %>

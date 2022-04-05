@@ -29,7 +29,7 @@ We used the same .env file as the valetbike github page describes.
 
 
 ## Recommended walkthrough steps to observe key features
-The welcome page lets the user signup or login. For the first-time user, click signup and enter an email address and password. The email address must contains "@" and the password and password confirmation must match with each other. After the sign up or log in, a map will show on the screen. And user can see 'edit password' or 'log out' using the buttons below the map. There is also menu bars(will change them to sidebars in the future work) at the bottom of the page now. Click 'VALETBIKE' will bring you back to the map page, 'Membership Plan' will lead you to the membership plan page. We do not have links for other pages yet.
+The welcome page lets the user signup or login. For the first-time user, click signup and enter an email address and password. The email address must contains "@" and the password and password confirmation must match with each other. After the sign up or log in, a map will show on the screen. And user can 'edit password' or 'log out' using the buttons below the map. There is also menu bars(will change them to sidebars in the future work) at the bottom of the page now. Click 'VALETBIKE' will bring you back to the map page, 'Membership Plan' will lead you to the membership plan page. We do not have links for other pages yet.
 
 ## Reference
 

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # get "users/new"
 
   root 'welcome#index'
+  get 'welcome', to: 'welcome#index'
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   post 'password', to: 'passwords#edit'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+  get 'plans', to: 'payment#plans'
 
 
 

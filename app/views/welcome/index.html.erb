@@ -1,6 +1,7 @@
 <h1>Welcome to ValetBike</h1>
 <% if Current.user %>
    Logged in as: <%= Current.user.email %><br>
+   <%= render "map/map" %>
 
    <%= button_to 'Edit Password', edit_password_path %>
    <%= button_to 'Logout', logout_path, method: :delete %>

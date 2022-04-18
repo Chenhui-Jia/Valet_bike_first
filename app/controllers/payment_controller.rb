@@ -14,4 +14,8 @@ class PaymentController < ApplicationController
     Current.user.update_attribute(:payment,"premium")
     redirect_to root_path, notice: 'You have selected premium'
   end
+
+  def plans
+
+  end
 end

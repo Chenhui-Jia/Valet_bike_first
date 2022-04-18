@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_04_12_152222) do
 
-
   create_table "stations", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.integer "identifier"
     t.string "name"
@@ -23,7 +22,6 @@ ActiveRecord::Schema.define(version: 2022_04_12_152222) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_unicode_520_ci", force: :cascade do |t|
     t.string "email", null: false

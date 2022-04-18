@@ -25,6 +25,13 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+<<<<<<< Updated upstream
+=======
+  get 'plans', to: 'payment#plans'
+  get 'payment1', to: 'payment#plan1'
+  get 'payment2', to: 'payment#plan2'
+  get 'payment3', to: 'payment#plan3'
+>>>>>>> Stashed changes
 
 
 

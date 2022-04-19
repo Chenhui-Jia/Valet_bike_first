@@ -1,7 +1,7 @@
 class PaymentController < ApplicationController
   def plan1
     Current.user.update_attribute(:payment,"per ride")
-    redirect_to root_path, notice: 'You have selected per ride'
+    redirect_to pay_path, notice: 'You have selected per ride'
   end
   def plan2
     Current.user.update_attribute(:payment,"pro")
@@ -17,5 +17,11 @@ class PaymentController < ApplicationController
 
   def plans
 
+  end
+  def pay
+
+  end
+  def redirect
+    redirect_to root_path, notice: 'Thanks for your payment'
   end
 end

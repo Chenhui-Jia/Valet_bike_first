@@ -6,4 +6,7 @@ class WelcomeController < ApplicationController
        :popup => "<b>#{station.name}</b><br>#{station.address}<br>(x) docked bikes<br>(x) empty docks"}
     end
   end
+
+  def profile
+  end
 end

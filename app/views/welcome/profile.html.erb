@@ -2,8 +2,17 @@
 <% if Current.user %>
    Logged in as: <%= Current.user.email %><br>
    Your payment plan is:  <%= Current.user.payment %><br>
+
+   <% if Current.user.payment=="" or !Current.user.payment %>
+      <%= button_to 'Join Membership', plans_path %>
+    <% else %>
+      <%= button_to 'Cancel Membership', cancel_path %>
+    <% end %>
+
+
    <%= button_to 'Edit Password', edit_password_path %>
    <%= button_to 'Logout', logout_path, method: :delete %>
+
 
    <% else %>
    <%= link_to 'Sign Up', sign_up_path %>

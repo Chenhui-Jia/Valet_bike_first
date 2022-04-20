@@ -29,9 +29,7 @@ Rails.application.routes.draw do
   patch 'password/reset/edit', to: 'password_resets#update'
 
   get 'plans', to: 'payment#plans'
-
-  get 'ride', to: 'ride#ride'
-
+  post 'plans', to: 'payment#plans'
   get 'payment1', to: 'payment#plan1'
   get 'payment2', to: 'payment#plan2'
   get 'payment3', to: 'payment#plan3'
@@ -40,6 +38,7 @@ Rails.application.routes.draw do
   get 'pay', to:'payment#pay'
   get 'redirect', to: "payment#redirect"
 
+  post 'cancel', to:'payment#cancel'
 
 
 

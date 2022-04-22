@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create', as: 'log_in'
   delete 'logout', to: 'sessions#destroy'
+  get 'logout', to:'sessions#destroy'
 
   post 'password', to: 'passwords#edit', as: 'edit_password'
   patch 'password', to: 'passwords#update'
@@ -39,6 +40,7 @@ Rails.application.routes.draw do
   get 'redirect', to: "payment#redirect"
 
   post 'cancel', to:'payment#cancel'
+  get 'ride', to:'ride#ride'
 
 
 

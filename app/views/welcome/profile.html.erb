@@ -1,10 +1,30 @@
-<h1>Account Information</h1>
+<style>
+
+h1 {
+  font-size: 50px;
+  color: #000000;
+}
+
+
+
+p {
+  font-size: 34px;
+}
+
+
+
+
+
+
+</style>
+
+<h1 style="text-align:center">Account Information</h1>
 <% if Current.user %>
-   Logged in as: <%= Current.user.email %><br>
-   Your payment plan is:  <%= Current.user.payment %><br>
+   <p style="text-align:center">Logged in as: <%= Current.user.email %><br>
+   Your payment plan is:  <%= Current.user.payment %><br> </p>
 
    <% if Current.user.payment=="" or !Current.user.payment %>
-      <%= button_to 'Join Membership', plans_path %>
+      <%= button_to 'Join Membership', plans_path  %>
     <% else %>
       <%= button_to 'Cancel Membership', cancel_path %>
     <% end %>

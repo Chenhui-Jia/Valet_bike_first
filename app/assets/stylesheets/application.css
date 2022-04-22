@@ -14,13 +14,23 @@
  *= require_self
  *= require leaflet
  */
-h1{
-  background-color: lightpink;
-
+ 
+ body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
 }
-p{
-  background-color: lightcyan;
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
-.sidebar{
-  color: blue;
-}
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
+}  

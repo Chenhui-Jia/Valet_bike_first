@@ -9,4 +9,7 @@ class WelcomeController < ApplicationController
 
   def profile
   end
+
+  def howToUse
+  end
 end

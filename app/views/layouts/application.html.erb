@@ -14,11 +14,14 @@
   <body>
     <p class="notice"><%= notice %></p>
          <p class="alert"><%= alert %></p>
+         <div class="page-container">
          <%= yield %>
+         </div>
          <% if Current.user %>
 
                   <div class="sidenav">
                     <a href="root">VALETBIKE</a><br>
+                    <a href="map">Station Map</a><br>
                     <a href="ride">Start Ride</a><br>
                     <a href="profile">Account Information</a><br>
                     <a href="plans">Membership Plan</a><br>

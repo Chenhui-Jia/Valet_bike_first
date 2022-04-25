@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   post 'cancel', to:'payment#cancel'
   get 'ride', to:'ride#ride'
 
+  get 'map', to: 'map#show'
+
 
 
 

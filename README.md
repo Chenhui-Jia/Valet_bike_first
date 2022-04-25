@@ -12,6 +12,7 @@ We used the same .env file as the valetbike github page describes.
 *  Run `rake db:create`
 *  `rake db:migrate`
 *  To import station data: `rake import_data:station['app/controllers/station-data.csv']`
+*  To import bike data: `rake import_data:bike['app/controllers/bike-data.csv']`
 *  `rails s`
 
 ## Description of the prototype's functionality

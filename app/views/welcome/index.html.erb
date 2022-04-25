@@ -6,10 +6,10 @@
 
 <div class="jumbotron text-center">
   <h1>ValetBike</h1>
-  <p>Rent bikes easily and conveniently.</p>
+  <h2>Rent bikes easily and conveniently.</h2>
   
     <% if Current.user %>
-      Logged in as: <%= Current.user.email %><br>
+      <p>Logged in as: <%= Current.user.email %></p>
       <%= button_to 'Log Out', logout_path, method: :delete %>
     <% else %>
       <%= button_to 'Sign Up', sign_up_path, method: :get %>

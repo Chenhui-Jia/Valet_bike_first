@@ -15,29 +15,36 @@
  *= require leaflet
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* general styles */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font: 400 15px Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.8;
-  color: #818181;
+  margin: 0;
+  text-align: center;
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
 }
 h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  color: #303030;
   font-weight: 600;
   margin-bottom: 30px;
+  text-align: center;
 }
-h4 {
-  font-size: 19px;
-  line-height: 1.375em;
-  color: #303030;
-  font-weight: 400;
-  margin-bottom: 30px;
+p {
+  margin: 0;
 }
+
+/* sidebar styles */
 .sidenav {
   width: 200px;
   position: fixed;
@@ -47,4 +54,17 @@ h4 {
   background: #eee;
   overflow-x: hidden;
   padding: 8px 0;
+}
+
+/* button styles */
+.button_to {
+  display: inline-block;
+}
+
+form input[type=submit] {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
 }

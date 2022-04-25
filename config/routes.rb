@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post 'sign_in', to: 'sessions#create', as: 'log_in'
   delete 'logout', to: 'sessions#destroy'
   get 'logout', to:'sessions#destroy'
+  get 'howToUse', to:'welcome#howToUse'
 
 
   post 'password', to: 'passwords#edit', as: 'edit_password'
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
   get 'payment2', to: 'payment#plan2'
   get 'payment3', to: 'payment#plan3'
   get 'profile', to: 'welcome#profile'
+
 
   get 'pay', to:'payment#pay'
   get 'redirect', to: "payment#redirect"

@@ -1,5 +1,13 @@
 class RideController < ApplicationController
     def ride
     end
-  end
+
+    def start
   
+    end
+    def end
+    end
+
+
+
+  end

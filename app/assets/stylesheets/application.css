@@ -61,6 +61,17 @@ p {
   display: inline-block;
 }
 
+button{
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: #8b0000;
+  padding: 0.8rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
 form input[type=submit] {
   font-family: inherit;
   font-size: 1.2rem;

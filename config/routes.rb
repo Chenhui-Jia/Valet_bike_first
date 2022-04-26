@@ -45,6 +45,8 @@ Rails.application.routes.draw do
   get 'ride', to:'ride#ride'
 
   get 'start', to: 'ride#start'
+  get 'map', to: 'map#show'
+  get 'howToUse', to: 'welcome#howToUse'
 
 
 

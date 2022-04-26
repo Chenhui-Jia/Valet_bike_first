@@ -3,7 +3,11 @@ class WelcomeController < ApplicationController
     # for displaying station markers on map
     @markers = Station.all.collect do |station|
       {:latlng => [station.latitude, station.longitude],
-       :popup => "<b>#{station.name}</b><br>#{station.address}<br>#{station.docked_bikes.count} docked bikes<br>#{station.dock_count - station.docked_bikes.count} empty docks "}
+       :popup => "<b>#{station.name}</b><br>#{station.address}<br>#{station.docked_bikes.count} docked bikes<br>#{station.dock_count - station.docked_bikes.count} empty docks<br><a href='start'>start</a>"
+     }
+
+
+
     end
   end
 
@@ -11,5 +15,5 @@ class WelcomeController < ApplicationController
   end
 
   def howToUse
-  end
+  end 
 end

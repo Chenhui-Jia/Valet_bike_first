@@ -15,13 +15,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'root', to: 'welcome#index'
+  post 'root', to: 'welcome#index'
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create', as: 'log_in'
   delete 'logout', to: 'sessions#destroy'
   get 'logout', to:'sessions#destroy'
-  get 'howToUse', to:'welcome#howToUse'
 
 
   post 'password', to: 'passwords#edit', as: 'edit_password'
@@ -38,14 +38,16 @@ Rails.application.routes.draw do
   get 'payment3', to: 'payment#plan3'
   get 'profile', to: 'welcome#profile'
 
-
   get 'pay', to:'payment#pay'
   get 'redirect', to: "payment#redirect"
 
   post 'cancel', to:'payment#cancel'
   get 'ride', to:'ride#ride'
 
+  get 'start', to: 'ride#start'
   get 'map', to: 'map#show'
+  get 'howToUse', to: 'welcome#howToUse'
+
 
 
 

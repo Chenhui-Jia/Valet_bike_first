@@ -1,4 +1,5 @@
 class MapController < ApplicationController
+
     def show
         @markers = Station.all.collect do |station|
             {:latlng => [station.latitude, station.longitude],

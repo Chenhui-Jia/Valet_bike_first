@@ -7,12 +7,12 @@ class RideController < ApplicationController
       # remove the route for start without station id and verify here
       @bike = Bike.find_by(current_station_id: params[:station_id])
       # make sure there is a bike docked at the station
-      redirect_to "/map" if !@bike # todo: add some kind of "no docked bikes" message
+      redirect_to "/map", notice: "No available bikes. Please choose a different station" if !@bike
 
       if @bike.update(current_station_id: nil)
         # todo: redirect_to different page to avoid checking out another bike if the user refreshes the page
       else
-        # todo: idk show an error message or something
+        redirect_to root_path, notice: "Sorry, something went wrong :("
       end
     end
 

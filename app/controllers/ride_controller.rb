@@ -4,9 +4,6 @@ class RideController < ApplicationController
     end
 
     def start
-      # todo: make sure there is a station passed in the params hash (not null) - 
-      # remove the route for start without station id and verify here
-
       # make sure user is logged in
       redirect_to root_path, notice: "Please sign in or create an account to rent a bike" if !Current.user
 

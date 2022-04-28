@@ -42,10 +42,11 @@ Rails.application.routes.draw do
   get 'redirect', to: "payment#redirect"
 
   post 'cancel', to:'payment#cancel'
-  get 'ride', to:'ride#ride'
 
-  get 'start', to: 'ride#start'
   get 'start/:station_id', to: 'ride#start'
+  get 'ride/:id', to: 'ride#ride'
+  get 'end/:id', to: 'ride#end'
+
   get 'map', to: 'map#show'
   get 'howToUse', to: 'welcome#howToUse'
 

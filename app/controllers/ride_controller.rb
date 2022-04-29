@@ -10,7 +10,7 @@ class RideController < ApplicationController
       # make sure user has a payment plans
 
       if  Current.user.payment=="" or !Current.user.payment
-        redirect_to plans_path, notice: "Please selct a payment plan before start a ride"
+        redirect_to plans_path, notice: "Please selct a payment plan before starting a ride"
         return 
       end
 

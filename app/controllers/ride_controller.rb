@@ -1,3 +1,4 @@
+
 class RideController < ApplicationController
     def ride
       @ride = Ride.find(params[:id])
@@ -6,6 +7,12 @@ class RideController < ApplicationController
     def start
       # make sure user is logged in
       redirect_to root_path, notice: "Please sign in or create an account to rent a bike" if !Current.user
+      # make sure user has a payment plans
+
+      if  Current.user.payment=="" or !Current.user.payment
+        redirect_to plans_path, notice: "Please selct a payment plan before start a ride"
+        return 
+      end
 
       @bike = Bike.find_by(current_station_id: params[:station_id])
       # make sure there is a bike docked at the station

@@ -6,5 +6,5 @@ class WelcomeController < ApplicationController
   end
 
   def howToUse
-  end 
+  end
 end

@@ -1,3 +1,4 @@
+
 class MapController < ApplicationController
     def show
         @markers = Station.all.collect do |station|

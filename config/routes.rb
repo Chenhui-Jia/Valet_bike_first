@@ -49,3 +49,5 @@ Rails.application.routes.draw do
 
   get 'map', to: 'map#show'
   get 'howToUse', to: 'welcome#howToUse'
+
+end
